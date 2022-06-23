@@ -1,0 +1,8 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.border-right {
+  border-right: 1px solid black;
+}
