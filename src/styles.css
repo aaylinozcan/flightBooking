@@ -43,7 +43,7 @@ input[type="signInText"]{
 .btnSignIn{
   cursor: pointer;
   border-radius: 10px;
-  background-color: #4c78ca;
+  background-color: #52b863;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;

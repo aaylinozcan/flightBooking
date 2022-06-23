@@ -1,6 +1,6 @@
 import React from "react";
 import { Form, Input, Label, Button } from "reactstrap";
-import {GiCommercialAirplane} from 'react-icons/gi';
+import { GiCommercialAirplane } from "react-icons/gi";
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -16,6 +16,7 @@ class SignIn extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+
     this.props.history.push({
       pathname: "/home",
       state: this.state,
@@ -34,13 +35,15 @@ class SignIn extends React.Component {
     return (
       <div className="app">
         <Form onSubmit={this.handleSubmit} className="login-form">
-          <Label className="label-signIn"><GiCommercialAirplane/></Label>
+          <Label className="label-signIn">
+            <GiCommercialAirplane />
+          </Label>
           <Label className="m-1" for="from"></Label>
           <Input
             type="signInText"
             email=""
-            value={this.state.from}
-            onChange={this.handleChange}
+            value={this.state.email}
+            onChange={(e) => this.handleChange(e)}
             placeholder="E-mail"
             required
           />
@@ -48,8 +51,8 @@ class SignIn extends React.Component {
             className="signIn-password"
             type="password"
             sifre=""
-            value={this.state.from}
-            onChange={this.handleChange}
+            value={this.state.sifre}
+            onChange={(e) => this.handleChange(e)}
             placeholder="Şifre"
             required
           />
