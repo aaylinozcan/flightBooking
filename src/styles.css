@@ -59,9 +59,9 @@ input[type="signInText"]{
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .label-signIn{
-  font-size: 20px;
-  padding: 80px;
-  margin-left: 15px;
+  font-size: 100px;
+  padding: 60px;
+  margin-left: 10px;
 }
 .kalkisLabel{
   padding: 10px;
@@ -124,7 +124,6 @@ input[type="signInText"]{
   font-size: 20px;
   margin-top: 30px;
   margin-left: 50px;
-
   width: 15%;
 }
 .onward-card{
@@ -151,4 +150,62 @@ input[type="signInText"]{
   margin-top: 10px;
   font-size: 1000px;
   background-color: #4c78ca;
+}
+.metin{
+  margin-left: 190px;
+  font-size: 50px;
+}
+.baslik{
+  margin-top: 30px;
+  border-radius: 30px;
+  padding: 30px;
+  border: 2px solid #dedede;
+  margin-left: 100px;
+  
+}
+.hepsi{
+  font-size: 22px;
+  padding: 50px;
+  margin-left: 60px;
+  justify-content: center;
+}
+.kalkis-yeri{
+  margin-top: 10px;
+  border: 2px solid #dedede;
+  border-radius: 10px;
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+  width: 30%;
+}
+.varis-yeri{
+  margin-top: 10px;
+  border: 2px solid #dedede;
+  border-radius: 10px;
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+  width: 30%;
+}
+.kalkis, .donus, .yolcu {
+  margin-top: 10px;
+  border: 2px solid #dedede;
+  border-radius: 10px;
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+}
+.ucus-ara{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #52b863;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 20px;
+  margin-top: 30px;
+  width: 100%;
+
 }

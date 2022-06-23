@@ -1,5 +1,6 @@
 import React from "react";
 import { Form, Input, Label, Button } from "reactstrap";
+import {GiCommercialAirplane} from 'react-icons/gi';
 
 class SignIn extends React.Component {
   constructor(props) {
@@ -33,7 +34,7 @@ class SignIn extends React.Component {
     return (
       <div className="app">
         <Form onSubmit={this.handleSubmit} className="login-form">
-          <Label className="label-signIn">Giriş Yapınız.</Label>
+          <Label className="label-signIn"><GiCommercialAirplane/></Label>
           <Label className="m-1" for="from"></Label>
           <Input
             type="signInText"

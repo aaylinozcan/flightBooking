@@ -1,5 +1,6 @@
 import React from "react";
 import { FormGroup, Form, Label, Input, Button } from "reactstrap";
+import {GiCommercialAirplane} from 'react-icons/gi';
 
 class Home extends React.Component {
   constructor(props) {
@@ -37,90 +38,98 @@ class Home extends React.Component {
     return (
       <div className="container" backroundcolor="white">
         <div className="row col-md-10">
-          <h3>Seyahat Serüveni Başlasın</h3>
+          <div className="baslik">
+            <h3 className="metin"><GiCommercialAirplane/>Seyahat Serüveni Başlasın</h3>
+          </div>
           {/* <Button className="m-1" type="submit">
             Çıkış Yap
           </Button> */}
-          <Form onSubmit={this.handleSubmit}>
-            <FormGroup tag="fieldset">
-              <FormGroup check>
-                <Label check>
-                  <Input
-                    type="radio"
-                    name="triptype"
-                    value="oneway"
-                    onChange={this.handleChange}
-                    checked={this.state.triptype === "oneway"}
-                  />{" "}
-                  Tek Yön
-                </Label>
-              </FormGroup>
-              <FormGroup check>
-                <Label check>
-                  <Input
-                    type="radio"
-                    name="triptype"
-                    value="roundtrip"
-                    onChange={this.handleChange}
-                    checked={this.state.triptype === "roundtrip"}
-                  />
-                  Gidiş-Dönüş
-                </Label>
-              </FormGroup>
-            </FormGroup>
-            <FormGroup>
-              <Label className="m-1" for="from">
-                Kalkış:
-              </Label>
-              <Input
-                type="text"
-                id="from"
-                name="from"
-                value={this.state.from}
-                onChange={this.handleChange}
-                required
-                list="cities"
-              />
-              <datalist id="cities">
-                <option value="SFO" />
-                <option value="BLR" />
-                <option value="IST" />
-                <option value="DEL" />
-                <option value="PNQ" />
-                <option value="ESN" />
-                <option value="SAW" />
-              </datalist>
-            </FormGroup>
+          <div className="hepsi">
+            <Form onSubmit={this.handleSubmit} className="row">
+              <FormGroup tag="fieldset"  >
+                <FormGroup check>
+                  <Label check>
+                    <Input
+                      type="radio"
+                      name="triptype"
+                      value="oneway"
+                      onChange={this.handleChange}
+                      checked={this.state.triptype === "oneway"}
+                    />{" "}
+                    Tek Yön
+                  </Label>
+                </FormGroup>
+                <FormGroup check>
+                  <Label check>
+                    <Input
 
-            <FormGroup>
-              <Label className="m-1" for="to">
-                Varış:
-              </Label>
-              <Input
-                type="text"
-                id="to"
-                name="to"
-                value={this.state.to}
-                onChange={this.handleChange}
-                required
-                list="cities"
-              />
-              <datalist id="cities">
-                <option value="SFO" />
-                <option value="BLR" />
-                <option value="IST" />
-                <option value="DEL" />
-                <option value="PNQ" />
-                <option value="ESN" />
-                <option value="SAW" />
-              </datalist>
-            </FormGroup>
-            <div>
-              <FormGroup className="kalkisLabel">
-                <Label className="kalkisLabel1" for="onward">
-                  Kalkış:
+                      type="radio"
+                      name="triptype"
+                      value="roundtrip"
+                      onChange={this.handleChange}
+                      checked={this.state.triptype === "roundtrip"}
+                    />
+                    Gidiş-Dönüş
+                  </Label>
+                </FormGroup>
+              </FormGroup>
+              <Form >
+                <FormGroup>
+                  <Label className="m-1" for="from">
+                    Kalkış Yeri:
+                  </Label>
+                  <Input className="kalkis-yeri"
+                    type="text"
+                    id="from"
+                    name="from"
+                    value={this.state.from}
+                    onChange={this.handleChange}
+                    required
+                    list="cities"
+                  />
+                  <datalist id="cities">
+                    <option value="SFO" />
+                    <option value="BLR" />
+                    <option value="IST" />
+                    <option value="DEL" />
+                    <option value="PNQ" />
+                    <option value="ESN" />
+                    <option value="SAW" />
+                  </datalist>
+                </FormGroup>
+
+                <FormGroup>
+                  <Label className="m-1" for="to">
+                    Varış Yeri:
+                  </Label>
+                  <Input
+                    className="varis-yeri"
+                    type="text"
+                    id="to"
+                    name="to"
+                    value={this.state.to}
+                    onChange={this.handleChange}
+                    required
+                    list="cities"
+                  />
+                  <datalist id="cities">
+                    <option value="SFO" />
+                    <option value="BLR" />
+                    <option value="IST" />
+                    <option value="DEL" />
+                    <option value="PNQ" />
+                    <option value="ESN" />
+                    <option value="SAW" />
+                  </datalist>
+                </FormGroup>
+              </Form>
+
+              <FormGroup className="col-md-4 mr-1">
+                <Label className="m-1" for="onward">
+                  Kalkış :
                 </Label>
                 <Input
+                  className="kalkis"
                   type="date"
                   id="onward"
                   name="onward"
@@ -129,40 +138,42 @@ class Home extends React.Component {
                   required
                 />
               </FormGroup>
-            </div>
 
-            <FormGroup className="col-md-4 mr-1">
-              <Label className="m-1" for="return">
-                Dönüş:
-              </Label>
-              <Input
-                type="date"
-                id="return"
-                name="return"
-                value={this.state.return}
-                onChange={this.handleChange}
-              />
-            </FormGroup>
+              <FormGroup className="col-md-4 mr-1">
+                <Label className="m-1" for="return">
+                  Dönüş:
+                </Label>
+                <Input
+                  className="donus"
+                  type="date"
+                  id="return"
+                  name="return"
+                  value={this.state.return}
+                  onChange={this.handleChange}
+                />
+              </FormGroup>
 
-            <FormGroup className="col-md-4 mr-1">
-              <Label className="m-1" for="travellercount">
-                Yolcu Sayısı:
-              </Label>
-              <Input
-                type="number"
-                id="traverllercount"
-                max={12}
-                min={1}
-                name="travellercount"
-                value={this.state.travellercount}
-                onChange={this.handleChange}
-              />
-            </FormGroup>
+              <FormGroup className="col-md-4 mr-1">
+                <Label className="m-1" for="travellercount">
+                  Yolcu Sayısı:
+                </Label>
+                <Input
+                  className="yolcu"
+                  type="number"
+                  id="traverllercount"
+                  max={12}
+                  min={1}
+                  name="travellercount"
+                  value={this.state.travellercount}
+                  onChange={this.handleChange}
+                />
+              </FormGroup>
 
-            <Button className="m-1 btn btn-secondary" type="submit">
-              Uçuş Ara
-            </Button>
-          </Form>
+              <Button className="ucus-ara" type="submit">
+                Uçuş Ara
+              </Button>
+            </Form>
+          </div>
         </div>
       </div>
     );
