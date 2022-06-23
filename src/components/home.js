@@ -1,6 +1,6 @@
 import React from "react";
 import { FormGroup, Form, Label, Input, Button } from "reactstrap";
-import {GiCommercialAirplane} from 'react-icons/gi';
+import { GiCommercialAirplane } from "react-icons/gi";
 
 class Home extends React.Component {
   constructor(props) {
@@ -39,14 +39,17 @@ class Home extends React.Component {
       <div className="container" backroundcolor="white">
         <div className="row col-md-10">
           <div className="baslik">
-            <h3 className="metin"><GiCommercialAirplane/>Seyahat Serüveni Başlasın</h3>
+            <h3 className="metin">
+              <GiCommercialAirplane />
+              Happy Hour Airlines
+            </h3>
           </div>
           {/* <Button className="m-1" type="submit">
             Çıkış Yap
           </Button> */}
           <div className="hepsi">
             <Form onSubmit={this.handleSubmit} className="row">
-              <FormGroup tag="fieldset"  >
+              <FormGroup tag="fieldset">
                 <FormGroup check>
                   <Label check>
                     <Input
@@ -62,7 +65,6 @@ class Home extends React.Component {
                 <FormGroup check>
                   <Label check>
                     <Input
-
                       type="radio"
                       name="triptype"
                       value="roundtrip"
@@ -73,12 +75,13 @@ class Home extends React.Component {
                   </Label>
                 </FormGroup>
               </FormGroup>
-              <Form >
+              <Form>
                 <FormGroup>
                   <Label className="m-1" for="from">
                     Kalkış Yeri:
                   </Label>
-                  <Input className="kalkis-yeri"
+                  <Input
+                    className="kalkis-yeri"
                     type="text"
                     id="from"
                     name="from"

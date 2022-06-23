@@ -16,7 +16,6 @@ class SignIn extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-
     this.props.history.push({
       pathname: "/home",
       state: this.state,
@@ -42,8 +41,8 @@ class SignIn extends React.Component {
           <Input
             type="signInText"
             email=""
-            value={this.state.email}
-            onChange={(e) => this.handleChange(e)}
+            value={this.state.from}
+            onChange={this.handleChange}
             placeholder="E-mail"
             required
           />
@@ -51,8 +50,8 @@ class SignIn extends React.Component {
             className="signIn-password"
             type="password"
             sifre=""
-            value={this.state.sifre}
-            onChange={(e) => this.handleChange(e)}
+            value={this.state.from}
+            onChange={this.handleChange}
             placeholder="Şifre"
             required
           />
