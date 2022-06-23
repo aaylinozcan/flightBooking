@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import {GiCommercialAirplane} from 'react-icons/gi';
 import {
   Button,
   Input,
@@ -20,9 +20,9 @@ function SelectSeat(props) {
       <Button onClick={toggle} className="btn-book">
         Koltuk Seçimi
       </Button>
-      
+
       <Modal isOpen={modal} toggle={toggle}  >
-        <ModalHeader  toggle={toggle} >Koltuk Seçimi</ModalHeader>
+        <ModalHeader toggle={toggle} >Koltuk Seçimi</ModalHeader>
         <ModalBody>
           <ul>
             {props.seats
@@ -37,7 +37,7 @@ function SelectSeat(props) {
                   key={seat.SeatId}
                   onClick={() => setSelectedSeat(seat.SeatId)}
                 >
-                  Seat {seat.SeatId}
+                  Koltuk {seat.SeatId}
                 </li>
               ))}
           </ul>
@@ -50,10 +50,10 @@ function SelectSeat(props) {
               toggle();
             }}
           >
-            Ok
+            Onayla
           </Button>{" "}
           <Button color="secondary" onClick={toggle}>
-            Cancel
+            İptal
           </Button>
         </ModalFooter>
       </Modal>
@@ -65,7 +65,7 @@ function PassengerCard(props) {
   return (
     <div className="row">
       <div className="adult-book" >
-        <p>Adult {props.passengerNumber + 1} </p>
+        <p>Yolcu {props.passengerNumber + 1} </p>
       </div>
       <div className="text-book">
         <Label for="firstname">İsim:</Label>
@@ -211,10 +211,10 @@ function BookingDetails(props) {
     <>
       <Modal isOpen={modal2}>
         <ModalHeader toggle={toggle2}></ModalHeader>
-        <ModalBody>Biletiniz Alınmıştır. İyi Uçuşlar.</ModalBody>
+        <ModalBody className="islem-tamam">Biletiniz Alınmıştır. İyi Uçuşlar Dileriz.<GiCommercialAirplane/></ModalBody>
         <ModalFooter>
           <Button
-            color="secondary"
+           className="go-to-home"
             onClick={() => {
               toggle2, (window.location.href = "http://localhost:3000/home");
             }}
@@ -224,10 +224,10 @@ function BookingDetails(props) {
         </ModalFooter>
       </Modal>
       <div className="container">
-        <h3 className="book-header">Traveller Information</h3>
+        <h3 className="book-header">Yolcu Bilgileri</h3>
         {passengers}
         <button className="payment-book" onClick={toggle2}>
-          Proceed to Payment
+          İşlemi Tamamla
         </button>
       </div>
     </>

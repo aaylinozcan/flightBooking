@@ -37,7 +37,7 @@ function FlightDetails(props) {
           }
         >
           {/* onward flight list */}
-          <h3 className="onward-header">Onward</h3>
+          <h3 className="onward-header">Gidiş</h3>
           {onwardFlights.map((flight) => (
             <FlightCard
               key={flight.FlightId}
@@ -49,7 +49,7 @@ function FlightDetails(props) {
         </div>
         {search.triptype === "roundtrip" ? (
           <div className="row">
-            <h3 className="return-text">Return</h3>
+            <h3 className="return-text">Dönüş</h3>
             {/* return flight list */}
             {returnFlights.map((flight) => (
               <FlightCard 
@@ -75,7 +75,7 @@ function FlightDetails(props) {
           })
         }
       >
-        Book
+        İncele
       </button>
     </div>
   );

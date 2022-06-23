@@ -19,7 +19,7 @@
   background-color: #f8f9fd;
 }
 .book-header{
-  margin-left: 500px;
+  margin-left: 550px;
   margin-top: 90px;
 }
 input[type="signInText"]{
@@ -110,8 +110,10 @@ input[type="signInText"]{
   padding: 15px;
 }
 .onward-header{
-  margin-left: 800px;
-  margin-top: 20px;
+
+  margin-top:  30px;
+  margin-bottom: -30px;
+  margin-left: 50px;
 }
 .btn-onward{
   cursor: pointer;
@@ -208,4 +210,19 @@ input[type="signInText"]{
   margin-top: 30px;
   width: 100%;
 
+}
+.go-to-home{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #52b863;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 20px;
+  margin-top: 10px;
+  width: 100%;
+}
+.islem-tamam{
+  font-size: 25px;
 }
