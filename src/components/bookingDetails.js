@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Button,
   Input,
@@ -6,7 +7,7 @@ import {
   Modal,
   ModalBody,
   ModalFooter,
-  ModalHeader
+  ModalHeader,
 } from "reactstrap";
 import { Flights } from "../data/FlightList";
 
@@ -20,7 +21,7 @@ function SelectSeat(props) {
         Select {props.type} Seat
       </Button>
       <Modal isOpen={modal} toggle={toggle}>
-        <ModalHeader toggle={toggle}>Select Seat</ModalHeader>
+        <ModalHeader toggle={toggle}>Koltuk Seçimi</ModalHeader>
         <ModalBody>
           <ul>
             {props.seats
@@ -66,13 +67,18 @@ function PassengerCard(props) {
         <p>Adult {props.passengerNumber + 1} </p>
       </div>
       <div className="col-sm-3">
-        <Label for="firstname">First Name:</Label>
+        <Label for="firstname">İsim:</Label>
         <Input type="text" id="firstname" />
       </div>
       <div className="col-sm-3">
-        <Label for="lastname">Last Name:</Label>
+        <Label for="lastname">Soyisim:</Label>
         <Input type="text" id="lastname" />
       </div>
+      <div className="col-sm-3">
+        <Label for="tcno">Tc Kimlik No:</Label>
+        <Input type="text" id="lastname" />
+      </div>
+
       <div className="col-sm-2 align-center">
         <SelectSeat
           seats={props.onwardSeats}
@@ -98,6 +104,8 @@ function PassengerCard(props) {
 }
 
 function BookingDetails(props) {
+  const [modal2, setModal2] = useState(false);
+  const toggle2 = () => setModal2(!modal2);
   let locState = props.location.state;
   let searchParams = locState ? props.location.state.search : undefined;
   let passengers = [];
@@ -128,7 +136,7 @@ function BookingDetails(props) {
       );
       newSeats[blockedSeatId] = {
         ...newSeats[blockedSeatId],
-        Status: "Available"
+        Status: "Available",
       };
     }
 
@@ -150,7 +158,7 @@ function BookingDetails(props) {
       );
       newSeats[blockedSeatId] = {
         ...newSeats[blockedSeatId],
-        Status: "Available"
+        Status: "Available",
       };
     }
 
@@ -195,18 +203,33 @@ function BookingDetails(props) {
     alert("Proceeding to payment");
     props.history.push({
       pathname: "/payment",
-      state: {}
+      state: {},
     });
   };
   return (
-    <div className="container">
-      <h3>Traveller Information</h3>
-      {passengers}
-
-      <button className="btn btn-primary" onClick={paymentBtnClick}>
-        Proceed to Payment
-      </button>
-    </div>
+    <>
+      <Modal isOpen={modal2}>
+        <ModalHeader toggle={toggle2}></ModalHeader>
+        <ModalBody>Biletiniz Alınmıştır. İyi Uçuşlar.</ModalBody>
+        <ModalFooter>
+          <Button
+            color="secondary"
+            onClick={() => {
+              toggle2, (window.location.href = "http://localhost:3000/home");
+            }}
+          >
+            Go To Home
+          </Button>
+        </ModalFooter>
+      </Modal>
+      <div className="container">
+        <h3>Traveller Information</h3>
+        {passengers}
+        <button className="btn btn-primary" onClick={toggle2}>
+          Proceed to Payment
+        </button>
+      </div>
+    </>
   );
 }
 

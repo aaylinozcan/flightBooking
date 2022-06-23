@@ -1,63 +1,243 @@
 const Flights = [
   {
     FlightId: 1,
-    Operator: "United Airlines",
-    From: "SFO",
-    To: "BLR",
-    Date: "2022-06-30",
-    Departure: "10:00",
-    Arrival: "23:30",
+    Operator: "Denver Airlines",
+    From: "SAW",
+    To: "DEN",
+    Date: "2022-07-29",
+    Departure: "11:00",
+    Arrival: "20:30",
     Price: 4500,
     Seats: [
       {
         SeatId: 1,
-        Status: "Available"
+        Status: "Blocked",
       },
       {
         SeatId: 2,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 3,
-        Status: "Available"
+        Status: "Blocked",
       },
       {
         SeatId: 4,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 5,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 6,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 7,
-        Status: "Available"
+        Status: "Blocked",
       },
       {
         SeatId: 8,
-        Status: "Available"
+        Status: "Blocked",
       },
       {
         SeatId: 9,
-        Status: "Available"
+        Status: "Blocked",
       },
       {
         SeatId: 10,
-        Status: "Blocked"
+        Status: "Blocked",
       },
       {
         SeatId: 11,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 12,
-        Status: "Available"
-      }
-    ]
+        Status: "Available",
+      },
+    ],
+  },
+  {
+    FlightId: 1,
+    Operator: "Turkish Airlines",
+    From: "ESN",
+    To: "SAW",
+    Date: "2022-07-10",
+    Departure: "16:00",
+    Arrival: "19:00",
+    Price: 4500,
+    Seats: [
+      {
+        SeatId: 1,
+        Status: "Blocked",
+      },
+      {
+        SeatId: 2,
+        Status: "Available",
+      },
+      {
+        SeatId: 3,
+        Status: "Blocked",
+      },
+      {
+        SeatId: 4,
+        Status: "Available",
+      },
+      {
+        SeatId: 5,
+        Status: "Available",
+      },
+      {
+        SeatId: 6,
+        Status: "Available",
+      },
+      {
+        SeatId: 7,
+        Status: "Blocked",
+      },
+      {
+        SeatId: 8,
+        Status: "Blocked",
+      },
+      {
+        SeatId: 9,
+        Status: "Blocked",
+      },
+      {
+        SeatId: 10,
+        Status: "Blocked",
+      },
+      {
+        SeatId: 11,
+        Status: "Available",
+      },
+      {
+        SeatId: 12,
+        Status: "Available",
+      },
+    ],
+  },
+  {
+    FlightId: 1,
+    Operator: "Turkish Airlines",
+    From: "SAW",
+    To: "ESN",
+    Date: "2022-07-08",
+    Departure: "11:00",
+    Arrival: "20:30",
+    Price: 4500,
+    Seats: [
+      {
+        SeatId: 1,
+        Status: "Blocked",
+      },
+      {
+        SeatId: 2,
+        Status: "Available",
+      },
+      {
+        SeatId: 3,
+        Status: "Blocked",
+      },
+      {
+        SeatId: 4,
+        Status: "Available",
+      },
+      {
+        SeatId: 5,
+        Status: "Available",
+      },
+      {
+        SeatId: 6,
+        Status: "Available",
+      },
+      {
+        SeatId: 7,
+        Status: "Blocked",
+      },
+      {
+        SeatId: 8,
+        Status: "Blocked",
+      },
+      {
+        SeatId: 9,
+        Status: "Blocked",
+      },
+      {
+        SeatId: 10,
+        Status: "Blocked",
+      },
+      {
+        SeatId: 11,
+        Status: "Available",
+      },
+      {
+        SeatId: 12,
+        Status: "Available",
+      },
+    ],
+  },
+  {
+    FlightId: 1,
+    Operator: "United Airlines",
+    From: "SAW",
+    To: "DEL",
+    Date: "2022-07-08",
+    Departure: "11:00",
+    Arrival: "20:30",
+    Price: 4500,
+    Seats: [
+      {
+        SeatId: 1,
+        Status: "Available",
+      },
+      {
+        SeatId: 2,
+        Status: "Available",
+      },
+      {
+        SeatId: 3,
+        Status: "Available",
+      },
+      {
+        SeatId: 4,
+        Status: "Available",
+      },
+      {
+        SeatId: 5,
+        Status: "Available",
+      },
+      {
+        SeatId: 6,
+        Status: "Available",
+      },
+      {
+        SeatId: 7,
+        Status: "Available",
+      },
+      {
+        SeatId: 8,
+        Status: "Available",
+      },
+      {
+        SeatId: 9,
+        Status: "Available",
+      },
+      {
+        SeatId: 10,
+        Status: "Blocked",
+      },
+      {
+        SeatId: 11,
+        Status: "Available",
+      },
+      {
+        SeatId: 12,
+        Status: "Available",
+      },
+    ],
   },
   {
     FlightId: 2,
@@ -71,53 +251,53 @@ const Flights = [
     Seats: [
       {
         SeatId: 1,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 2,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 3,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 4,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 5,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 6,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 7,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 8,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 9,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 10,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 11,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 12,
-        Status: "Available"
-      }
-    ]
+        Status: "Available",
+      },
+    ],
   },
   {
     FlightId: 3,
@@ -131,53 +311,53 @@ const Flights = [
     Seats: [
       {
         SeatId: 1,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 2,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 3,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 4,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 5,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 6,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 7,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 8,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 9,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 10,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 11,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 12,
-        Status: "Available"
-      }
-    ]
+        Status: "Available",
+      },
+    ],
   },
   {
     FlightId: 4,
@@ -191,54 +371,54 @@ const Flights = [
     Seats: [
       {
         SeatId: 1,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 2,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 3,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 4,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 5,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 6,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 7,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 8,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 9,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 10,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 11,
-        Status: "Available"
+        Status: "Available",
       },
       {
         SeatId: 12,
-        Status: "Available"
-      }
-    ]
-  }
+        Status: "Available",
+      },
+    ],
+  },
 ];
 
 export { Flights };

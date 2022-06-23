@@ -1,8 +1,64 @@
-.App {
-  font-family: sans-serif;
+/* .App {
+  font-family: "Lato-sans/serif";
   text-align: center;
 }
 
 .border-right {
-  border-right: 1px solid black;
+  border-right: 1px solid rgb(255, 255, 255);
+  justify-content: center;
+} */
+
+.app {
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+  height: 100vh;
+  background-color: #f8f9fd;
+}
+input[type="signInText"]{
+  margin-top: 10px;
+  border: 2px solid #dedede;
+  border-radius: 10px;
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+}
+.signIn-password{
+  margin-top: 10px;
+  border: 2px solid #dedede;
+  border-radius: 10px;
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+  width: 100%;
+}
+.btnSignIn{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #4c78ca;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 20px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+.login-form{
+  background-color: white;
+  padding: 2rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.label-signIn{
+  font-size: 20px;
+  padding: 80px;
+  margin-left: 15px;
+}
+.kalkisLabel{
+  padding: 10px;
 }

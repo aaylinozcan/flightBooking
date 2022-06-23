@@ -10,7 +10,7 @@ class Home extends React.Component {
       to: "",
       onward: "",
       return: "",
-      travellercount: 1
+      travellercount: 1,
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -21,7 +21,7 @@ class Home extends React.Component {
     e.preventDefault();
     this.props.history.push({
       pathname: "/flightdetails",
-      state: this.state
+      state: this.state,
     });
   }
 
@@ -29,15 +29,18 @@ class Home extends React.Component {
     //console.log("Handling change for : ", e.target.name, e.target.value);
     this.setState({
       ...this.state,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   }
 
   render() {
     return (
-      <div className="container">
+      <div className="container" backroundcolor="white">
         <div className="row col-md-10">
           <h3>Seyahat Serüveni Başlasın</h3>
+          {/* <Button className="m-1" type="submit">
+            Çıkış Yap
+          </Button> */}
           <Form onSubmit={this.handleSubmit}>
             <FormGroup tag="fieldset">
               <FormGroup check>
@@ -105,22 +108,28 @@ class Home extends React.Component {
               <datalist id="cities">
                 <option value="SFO" />
                 <option value="BLR" />
+                <option value="IST" />
+                <option value="DEL" />
+                <option value="PNQ" />
+                <option value="ESN" />
+                <option value="SAW" />
               </datalist>
             </FormGroup>
-
-            <FormGroup className="col-md-4 mr-1">
-              <Label className="m-1" for="onward">
-                Kalkış:
-              </Label>
-              <Input
-                type="date"
-                id="onward"
-                name="onward"
-                value={this.state.onward}
-                onChange={this.handleChange}
-                required
-              />
-            </FormGroup>
+            <div>
+              <FormGroup className="kalkisLabel">
+                <Label className="kalkisLabel1" for="onward">
+                  Kalkış:
+                </Label>
+                <Input
+                  type="date"
+                  id="onward"
+                  name="onward"
+                  value={this.state.onward}
+                  onChange={this.handleChange}
+                  required
+                />
+              </FormGroup>
+            </div>
 
             <FormGroup className="col-md-4 mr-1">
               <Label className="m-1" for="return">
@@ -150,7 +159,7 @@ class Home extends React.Component {
               />
             </FormGroup>
 
-            <Button className="m-1" type="submit">
+            <Button className="m-1 btn btn-secondary" type="submit">
               Uçuş Ara
             </Button>
           </Form>
