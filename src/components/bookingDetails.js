@@ -17,11 +17,12 @@ function SelectSeat(props) {
   const toggle = () => setModal(!modal);
   return (
     <div>
-      <Button color="primary" onClick={toggle} className="btn-sm">
-        Select {props.type} Seat
+      <Button onClick={toggle} className="btn-book">
+        Koltuk Seçimi
       </Button>
-      <Modal isOpen={modal} toggle={toggle}>
-        <ModalHeader toggle={toggle}>Koltuk Seçimi</ModalHeader>
+      
+      <Modal isOpen={modal} toggle={toggle}  >
+        <ModalHeader  toggle={toggle} >Koltuk Seçimi</ModalHeader>
         <ModalBody>
           <ul>
             {props.seats
@@ -62,20 +63,20 @@ function SelectSeat(props) {
 
 function PassengerCard(props) {
   return (
-    <div className="row ">
-      <div className="col-sm-2 text-center align-bottom">
+    <div className="row">
+      <div className="adult-book" >
         <p>Adult {props.passengerNumber + 1} </p>
       </div>
-      <div className="col-sm-3">
+      <div className="text-book">
         <Label for="firstname">İsim:</Label>
         <Input type="text" id="firstname" />
       </div>
-      <div className="col-sm-3">
+      <div className="text-book">
         <Label for="lastname">Soyisim:</Label>
         <Input type="text" id="lastname" />
       </div>
-      <div className="col-sm-3">
-        <Label for="tcno">Tc Kimlik No:</Label>
+      <div className="text-book">
+        <Label for="tcno">E-mail:</Label>
         <Input type="text" id="lastname" />
       </div>
 
@@ -84,7 +85,7 @@ function PassengerCard(props) {
           seats={props.onwardSeats}
           seatSelectHandler={props.onwardSeatHandler}
           passengerNumber={props.passengerNumber}
-          type="Onward"
+          type=""
         />
         <p>{props.passengerOnSeats[props.passengerNumber]}</p>
       </div>
@@ -223,9 +224,9 @@ function BookingDetails(props) {
         </ModalFooter>
       </Modal>
       <div className="container">
-        <h3>Traveller Information</h3>
+        <h3 className="book-header">Traveller Information</h3>
         {passengers}
-        <button className="btn btn-primary" onClick={toggle2}>
+        <button className="payment-book" onClick={toggle2}>
           Proceed to Payment
         </button>
       </div>

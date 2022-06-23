@@ -18,6 +18,10 @@
   height: 100vh;
   background-color: #f8f9fd;
 }
+.book-header{
+  margin-left: 500px;
+  margin-top: 90px;
+}
 input[type="signInText"]{
   margin-top: 10px;
   border: 2px solid #dedede;
@@ -61,4 +65,90 @@ input[type="signInText"]{
 }
 .kalkisLabel{
   padding: 10px;
+}
+.btn-book{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #4c78ca;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 20px;
+  width: 100%;
+  margin-top: 20px;
+  margin-right: 50px;
+}
+.btn-return-book{
+  font-size: 50px;
+}
+.adult-book{
+  padding: 10px;
+  font-size: 20px;
+  margin-left:600px;
+}  
+.text-book{
+  margin-top: 10px;
+  margin-left: 5px;
+  border: 2px solid #dedede;
+  border-radius: 10px;
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+  width: 30%;
+}
+.payment-book{
+  cursor: pointer;
+  background-color: #52b863;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 20px;
+  margin-left: 1000px;
+  padding: 15px;
+}
+.onward-header{
+  margin-left: 800px;
+  margin-top: 20px;
+}
+.btn-onward{
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #52b863;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: block;
+  font-size: 20px;
+  margin-top: 30px;
+  margin-left: 50px;
+
+  width: 15%;
+}
+.onward-card{
+  margin-top: 60px;
+  margin-left: 50px;
+  border: 2px solid #dedede;
+  border-radius: 10px;
+  display: block;
+  font-size: 20px;
+  padding: 10px;
+  width: 30%;
+}
+.return-onward{
+    font-size: 20px;
+    margin-top: 10px;
+}
+.return-text{
+  margin-top: 30px;
+  margin-bottom: -30px;
+  margin-left: 50px;
+  
+}
+.return-card{
+  margin-top: 10px;
+  font-size: 1000px;
+  background-color: #4c78ca;
 }

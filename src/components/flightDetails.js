@@ -4,7 +4,7 @@ import { Flights } from "../data/FlightList";
 
 function FlightCard({ flight, handleClick, selectedFlightId }) {
   return (
-    <Card
+    <Card className="onward-card"
       outline={flight.FlightId === selectedFlightId ? true : null}
       color={flight.FlightId === selectedFlightId ? "primary" : null}
       onClick={() => {
@@ -13,7 +13,7 @@ function FlightCard({ flight, handleClick, selectedFlightId }) {
     >
       <CardBody>
         <CardTitle>{flight.Operator}</CardTitle>
-        <CardSubtitle className="text-muted">
+        <CardSubtitle>
           {flight.From} to {flight.To}
         </CardSubtitle>
       </CardBody>
@@ -29,15 +29,15 @@ function FlightDetails(props) {
   const [onwardFlight, setOnwardFlight] = useState(0);
   const [returnFlight, setReturnFlight] = useState(0);
   return (
-    <div className="container">
-      <div className="row">
+    <div className="return-onward">
+      <div className="column">
         <div
           className={
             search.triptype === "oneway" ? "col-md-10" : "col-sm-5 mr-1"
           }
         >
           {/* onward flight list */}
-          <h3>Onward</h3>
+          <h3 className="onward-header">Onward</h3>
           {onwardFlights.map((flight) => (
             <FlightCard
               key={flight.FlightId}
@@ -48,11 +48,11 @@ function FlightDetails(props) {
           ))}
         </div>
         {search.triptype === "roundtrip" ? (
-          <div className="col-sm-5 ml-1">
-            <h3>Return</h3>
+          <div className="row">
+            <h3 className="return-text">Return</h3>
             {/* return flight list */}
             {returnFlights.map((flight) => (
-              <FlightCard
+              <FlightCard 
                 key={flight.FlightId}
                 flight={flight}
                 selectedFlightId={returnFlight}
@@ -63,7 +63,7 @@ function FlightDetails(props) {
         ) : null}
       </div>
       <button
-        className="btn btn-primary m-1"
+        className="btn-onward"
         onClick={() =>
           props.history.push({
             pathname: "/book",
